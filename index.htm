@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Găsește-ți Jumătatea ❤️</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #fff0f5;
+text-align: center;
+padding: 50px;
+}
+input, button {
+margin: 10px;
+padding: 10px;
+font-size: 16px;
+}
+#rezultat {
+margin-top: 30px;
+font-size: 20px;
+color: darkred;
+}
+</style>
+</head>
+<body>
+
+<h1>💘 Găsește-ți Jumătatea 💘</h1>
+
+<p>Completează câteva detalii despre tine:</p>
+
+<input type="text" id="nume" placeholder="Prenumele tău"><br>
+<input type="number" id="varsta" placeholder="Vârsta"><br>
+<input type="text" id="hobby" placeholder="Hobby-ul tău"><br>
+
+<button onclick="gasescJumatatea()">Află!</button>
+
+<div id="rezultat"></div>
+
+<script>
+function gasescJumatatea() {
+const nume = document.getElementById("nume").value;
+const varsta = document.getElementById("varsta").value;
+const hobby = document.getElementById("hobby").value;
+
+if (nume && varsta && hobby) {
+const mesaj = `${nume}, la ${varsta} de ani, cu pasiunea ta pentru ${hobby}, îți vei găsi jumătatea într-un loc neașteptat, dar perfect pentru tine! ❤️`;
+document.getElementById("rezultat").innerText = mesaj;
+} else {
+document.getElementById("rezultat").innerText = "Te rog completează toate câmpurile!";
+}
+}
+</script>
+
+</body>
+</html>
